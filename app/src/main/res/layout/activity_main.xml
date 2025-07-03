@@ -3,21 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
     android:background="#181B17"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
     android:padding="20dp">
 
+    <FrameLayout
+        android:id="@+id/F1"
+        android:layout_width="match_parent"
+        android:layout_height="22dp" />
+
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/T1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="100dp"
         android:text=" THE EXPENSE APP "
+        android:textColor="#2BE9B0"
         android:textSize="28sp"
         android:textStyle="bold"
-        android:textColor="#2BE9B0"
         tools:ignore="HardcodedText" />
 
 
@@ -32,10 +37,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="#D3EDD0"
-            android:layout_marginStart="10dp"
             android:text="ITEM  : "
             android:textSize="24sp"
             tools:ignore="HardcodedText" />
@@ -44,15 +49,14 @@
             android:id="@+id/E1"
             android:layout_width="150dp"
             android:layout_height="25dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
             android:background="#D3EDD0"
             android:ems="5"
             android:importantForAutofill="no"
-            android:inputType="text"
-            />
+            android:inputType="text" />
 
 
     </LinearLayout>
@@ -68,7 +72,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="#D3EDD0"
@@ -80,10 +84,10 @@
             android:id="@+id/E2"
             android:layout_width="150dp"
             android:layout_height="25dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
             android:background="#D3EDD0"
             android:ems="5"
             android:importantForAutofill="no"
@@ -152,5 +156,30 @@
         android:layout_marginBottom="20dp"
         android:text="REMOVE"
         tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/B2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="SHOW DETAILS"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/B3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="FINANCIAL TIPS"
+        tools:ignore="HardcodedText" />
+
+    <FrameLayout
+        android:id="@+id/F2"
+        android:layout_width="match_parent"
+        android:layout_height="17dp" />
 
 </LinearLayout>
