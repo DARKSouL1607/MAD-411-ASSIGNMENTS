@@ -1,20 +1,35 @@
 package com.example.assignment6
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class ExpenseDetailsActivity : AppCompatActivity() {
+
+    @SuppressLint("SetTextI18n") // TO CLEAR WARNINGS
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_details)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        val itemName = findViewById<TextView>(R.id.T1)
+        val price = findViewById<TextView>(R.id.T2)
+        val dateShow = findViewById<TextView>(R.id.T3)
+        val exitButton = findViewById<Button>(R.id.exit)
+        // TO LOAD DATA FROM THE INTENT I MADE IN MAIN ACTIVITY
+        val item = intent.getStringExtra("NAME")
+        val amount = intent.getStringExtra("AMOUNT")
+        val date = intent.getStringExtra("DATE")
+        // SHOWING DATA
+        itemName.text = "ITEM NAME : $item"
+        price.text = "PRICE : $amount"
+        dateShow.text = "DATE : $date"
+        // EXIT BUTTON TO MAIN SCREEN
+        exitButton.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 }
