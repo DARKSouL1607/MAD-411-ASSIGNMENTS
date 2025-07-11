@@ -113,20 +113,21 @@ class MainActivity : AppCompatActivity() {
             .replace(frameId, fragment)
             .commit()
     }
-    private fun saveExpensesToPrefs() {
-        val prefs = getSharedPreferences("expense_prefs", MODE_PRIVATE)
-        val editor = prefs.edit()
-        val json = Gson().toJson(expenseList)
-        editor.putString("expenses", json)
-        editor.apply()
-    }
+    // LEARNING PURPOSE
+    // private fun saveExpensesToPrefs() {
+    //     val prefs = getSharedPreferences("expense_prefs", MODE_PRIVATE)
+    //     val editor = prefs.edit()
+    //     val json = Gson().toJson(expenseList)
+    //     editor.putString("expenses", json)
+    //     editor.apply()
+    // }
 
-    private fun loadExpensesFromPrefs(): MutableList<Expense> {
-        val prefs = getSharedPreferences("expense_prefs", MODE_PRIVATE)
-        val json = prefs.getString("expenses", null) ?: return mutableListOf()
-        val type = object : TypeToken<MutableList<Expense>>() {}.type
-        return Gson().fromJson(json, type)
-    }
+    // private fun loadExpensesFromPrefs(): MutableList<Expense> {
+    //     val prefs = getSharedPreferences("expense_prefs", MODE_PRIVATE)
+    //     val json = prefs.getString("expenses", null) ?: return mutableListOf()
+    //     val type = object : TypeToken<MutableList<Expense>>() {}.type
+    //     return Gson().fromJson(json, type)
+    // }
     // ACTIVITY LIFECYCLES OVERRIDE AND LOG METHODS
     override fun onStart() { super.onStart(); Log.d("LIFECYCLE", "THE ON START CALLED") }
     override fun onResume() { super.onResume(); Log.d("LIFECYCLE", "THE ON RESUME CALLED") }
