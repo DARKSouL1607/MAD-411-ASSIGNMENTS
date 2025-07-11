@@ -4,9 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#181B17"
+    android:gravity="center"
     android:orientation="vertical"
-    android:padding="20dp"
-    android:gravity="center">
+    android:padding="20dp">
 
     <TextView
         android:id="@+id/TITLE"
@@ -19,17 +19,17 @@
         tools:ignore="HardcodedText" />
 
     <TextView
-        android:id="@+id/nameText"
+        android:id="@+id/T1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ITEM NAME :"
-        android:textSize="24sp"
-        android:textColor="#2BE9B0"
         android:layout_marginTop="40dp"
+        android:text="ITEM NAME :"
+        android:textColor="#2BE9B0"
+        android:textSize="24sp"
         tools:ignore="HardcodedText" />
 
     <TextView
-        android:id="@+id/amountText"
+        android:id="@+id/T2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -39,14 +39,14 @@
         tools:ignore="HardcodedText" />
 
     <TextView
-        android:id="@+id/dateText"
+        android:id="@+id/T3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="DATE - "
-        tools:ignore="HardcodedText"
-        android:textSize="24sp"
         android:textColor="#2BE9B0"
-        android:layout_marginTop="20dp"/>
+        android:textSize="24sp"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/exit"
@@ -54,7 +54,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="EXIT"
-
         tools:ignore="HardcodedText" />
 
 </LinearLayout>

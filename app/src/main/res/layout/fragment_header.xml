@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#2BE9B0"
+    android:padding="10dp">
+
+    <Button
+        android:id="@+id/H1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="THE EXPENSE APP"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:background="#7A1ECC"
+        android:gravity="center"
+        android:padding="10dp"
+        tools:ignore="HardcodedText" />
+
+</FrameLayout>
